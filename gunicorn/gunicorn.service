@@ -4,7 +4,7 @@ Requires=gunicorn.socket
 After=network.target
 [Service]
 User=ubuntu
-Group=www-data
+Group=ubuntu
 WorkingDirectory=/home/ubuntu/ecom
 ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/ecom/ecom/ecom.sock ecom.wsgi:application
 
